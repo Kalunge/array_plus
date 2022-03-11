@@ -11,28 +11,24 @@ class ArrayPlus
             'Array should not contain negative or double digit numbers'
     end
 
-    result = array.join.to_i + 1
-    result.to_s.scan(/\d/).map(&:to_i)
-
+    # result = array.join.to_i + 1
+    # result.to_s.scan(/\d/).map(&:to_i)
     
-    # num = 0
+    num = 0
+    output = []
+    array.each { |item| num = (num * 10) + item }
+    new_num = num + 1
 
-    # output = []
+    pos = new_num.to_s.length - 1
 
-    # array.each { |item| num = (num * 10) + item }
-    # new_num = num + 1
+    while new_num > 0
+      digit = new_num % 10
+      new_num = (new_num - digit) / 10
 
-    # pos = new_num.to_s.length - 1
-
-    # while new_num
-    #   digit = new_num % 10
-    #   new_num = (new_num - digit) / 10
-
-    #   output[pos] = digit
-    #   pos -= 1
-    # end
-    # output
+      output[pos] = digit
+      pos -= 1
+    end
+    output
   end
 end
 
-p ArrayPlus.add_one([1, 2, 3, 5, 7])
