@@ -14,4 +14,9 @@ For example the array `[2, 3, 9]` equals `239`, adding one would return the arra
 # Acceptance criteria
 * The solution is written using idiomatic ruby
 * There are tests to verify the correctness of your solution
-* DO NOT post a reply on the gist
+
+# Setup
+* clone or download repo using
+  ```git@github.com:Kalunge/array_plus.git``` cd into ```array_plus``` run ```bundle install``` then run ```rspec```
+
+
