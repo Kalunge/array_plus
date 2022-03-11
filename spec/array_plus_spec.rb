@@ -15,7 +15,7 @@ describe 'ArrayPlus' do
     expect { ArrayPlus.add_one }.to raise_exception an_instance_of(ArgumentError)
   end
 
-  it 'Returns an error if called with invalid inputs' do
+  it 'Returns nil if called with invalid inputs' do
     expect(ArrayPlus.add_one('f')).to be_nil
   end
 
