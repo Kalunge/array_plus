@@ -22,7 +22,7 @@ class ArrayPlus
     # array.each { |item| num = (num * 10) + item }
     # new_num = num + 1
 
-    # pos = array.size - 1
+    # pos = new_num.to_s.length - 1
 
     # while new_num
     #   digit = new_num % 10
