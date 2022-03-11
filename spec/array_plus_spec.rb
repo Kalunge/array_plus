@@ -15,6 +15,10 @@ describe 'ArrayPlus' do
     expect { ArrayPlus.add_one }.to raise_exception an_instance_of(ArgumentError)
   end
 
+  it 'Returns an error if called with invalid inputs' do
+    expect(ArrayPlus.add_one('f')).to be_nil
+  end
+
   it 'return an array that has 1 added to the value represented by the array' do
     result = ArrayPlus.add_one([2, 3, 9])
     expect(result).to eq([2, 4, 0])
